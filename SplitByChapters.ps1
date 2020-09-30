@@ -23,7 +23,11 @@ $Starttime = 0.000000
 
 #For each endtime output file
 for ($i=0; $i -lt $Endtimes.length; $i++) {
-    $chapterNum = $i + 1
-    .\ffmpeg -i "$audioBook" -ss $Starttime -to $Endtimes[$i] "$path\Chapter $chapterNum - $Book.mp3"
-	$Starttime = $Endtimes[$i]
+    $ChapterNum = $i + 1
+    if ($ChapterNum  -le 9) {
+    D:\ffmpeg\bin\ffmpeg.exe -i "$audioBook.m4b" -ss $Starttime -to $Endtimes[$i] "$PSScriptRoot\$audioBook\Chapter 0$chapterNum - $audioBook.mp3"
+    } Else {
+    D:\ffmpeg\bin\ffmpeg.exe -i "$audioBook.m4b" -ss $Starttime -to $Endtimes[$i] "$PSScriptRoot\$audioBook\Chapter $chapterNum - $audioBook.mp3"
+    }
+    $Starttime = $Endtimes[$i]
 }
