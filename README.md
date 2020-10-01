@@ -4,7 +4,7 @@ A few PowerShell scripts that will split audiobook(s) by chapter markers and out
 ## SplitByChapters.ps1
 Using the file explorer you can select one .mp4, .m4a or .mp4 and it will cut it into chapters by chapter markers and output to .mp3s in the same directory as the audiobook.
 
-## MassSplitChapter.ps1
+## MassSplitChapters.ps1
 Takes all .M4Bs in a directory it is placed in and converts them to mp3s and places them in a folder with the name of the audiobook.
 
 ## Requirments
